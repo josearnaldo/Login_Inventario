@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="javascripts/register.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+</head>
+<body>
+    <div id="gradient-overlay">
+    <form method="POST" id="registrationForm" action="/register">
+        
+
+        <div id="cadastro" >
+            <h2>Cadastro:</h2>
+          <div>
+                <p>Nome Completo da empresa:</p>
+                <input type="text" placeholder="Ex. Joaquim da Silva" name="Companyname"> 
+             </div>
+          <div>
+                <p>Email empresarial:</p>
+                <input type="email" placeholder="Ex. Cirilo@hotmail.com" name="email">
+        </div>
+        <div>
+                <p>Telefone do Representante:</p>
+                <input type="tel" placeholder="67991101010" name="telefone">
+        </div>
+        <div>
+          
+           <p>CNPJ:</p>
+           <input type="number" placeholder="apenas numero!!!" name="cnpj">
+        </div>
+         <div>
+           <p>Senha:</p>
+           <input type="password" placeholder="senha" name="password">
+        </div>
+        <div>
+           <p>Confirmar Senha:</p>
+           <input type="password" placeholder="senha" name="password">
+         </div>
+          <div> 
+               <p> Endereço:</p>
+                <input type="text" placeholder="Rua Pamonha " name="address">
+        </div>
+        <div>
+           <p> numero do estabelecimento:</p>
+           <input type="number" placeholder="23" name="number">
+      </div>
+
+           <div id="Termos">
+            <input type="checkbox" id = "checkbox" > <p>Li e concordo com os termos de condições </p>
+      
+</div>
+            <button id="botao1" type="submit"> Confirmar</button>
+
+
+
+          
+            
+
+        </div>
+    </div>
+
+    </form>
+                           <input type="text" placeholder="FULLNAME" style="display: none;" name="fullname">
+           <input type="number" placeholder="AGE" style="display: none;" name="age">
+</body>
+</html>

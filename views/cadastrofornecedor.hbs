@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <meta charset="UTF-8">
+    <base href="/">
+    <link rel="stylesheet" href="css/fornecedor.css">
+    <link rel="stylesheet" href="css/navbar.css">
+  
+    <script src="javascripts/main.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-apple"></ion-icon>
+                        </span>
+                        <span class="title">Inventário de bens</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Pagina Inicial</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-dropbox"></ion-icon>
+                        </span>
+                        <span class="title">Inventário</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="business-outline"></ion-icon>
+                        </span>
+                        <span class="title">Fornecedores</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ajuda</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Relatório</span>
+                    </a>
+                </li>
+
+    
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    
+<div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="user_geral">
+                    <div class="user">
+                        <img src="assets/imgs/customer01.jpg" alt="">
+                        
+                    </div>
+                    <p>{{username}}</p>
+                </div>
+            </div>
+
+   
+<div class="content">
+    <div class="tabela">
+        <div id="div_button">
+        <a href="/cadastrarfornecedor"> <button id="add_item" type="button">Adicionar Fornecedor</button></a>
+         </div>
+    <table>
+    <tr class="table-linha">
+        <th class="table-index1">Nome</th>
+        <th class="table-index">Quantidade</th>
+        <th class="table-index">Fornecedor</th>
+        <th class="table-index">Situação</th>
+        <th class="table-index">Status</th>
+        <th class="table-index2">Editar</th>    
+    </tr>
+   
+    <tr>
+        <td>Alfreds </td>
+        <td>Maria </td>
+        <td>Germany</td>
+
+    </tr>
+    <tr>
+        <td>Centro comercial </td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+   
+    </table>
+    
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

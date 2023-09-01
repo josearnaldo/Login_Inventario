@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-color: #f5f6fa;
+}
+.content__bar .sidebar{
+    background-color: rgb(5, 68, 104);
+    position: fixed;
+    top: 0;
+    left: 0 ;
+    width: 225px;
+    height: 100%;
+    padding: 20px;
+    transition: all 0.5s ease;
+}

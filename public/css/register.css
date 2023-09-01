@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@200;300;400&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+  /*  background-image: url('../images/empresas.jpg'); */
+
+   background: linear-gradient(45deg, #333 50%, #ddd 50%);
+   background-repeat: no-repeat;
+    /*background-size: cover; /* Ajusta o tamanho para cobrir o elemento */ 
+    background-position: center; /* Centraliza a imagem */
+    height: 100vh; /* Define a altura para 100% da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    color: #fff;
+
+}
+#gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 5), rgba(0, 0, 0, 0.4));
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+   }
+
+   #cadastro{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 650px;
+        height: 630px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.15);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+   }
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 500px
+
+}
+p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+    margin-right: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+div input{
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    width: 200px;
+    height: 20px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.55);
+    border-top: 1px solid rgba(255, 255, 255, 0.);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border: none;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+    width: 200px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    color: #eee8e8;
+}
+input:focus {
+    
+    border: 2px solid orange;
+
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+  }
+  input::-webkit-scrollbar {
+    height: 10px; /* Altura da barra de rolagem */
+    width: 10px;
+  }
+  input::-webkit-scrollbar-thumb {
+    background: orange; /* Cor da barra de rolagem */
+    border-radius: 7px; /* Borda arredondada */
+  }
+input::-webkit-scrollbar-track {
+  background: transparent; /* Cor da área de fundo da barra de rolagem */
+}
+
+#Termos{
+    display: flex;
+    flex-direction: row;
+}
+#checkbox{
+    width: 20px;
+}
+
+#botao1 {
+    margin-top: 20px;
+    align-items: center;
+    appearance: none;
+    background-color: #36cff5;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  #botao1:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  #botao1:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  #botao1:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
