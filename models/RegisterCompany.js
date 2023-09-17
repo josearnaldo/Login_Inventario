@@ -5,8 +5,9 @@ const router = express.Router();
 
 router.post('/', async(req, res)=>{
     const saltRound = 10;
+    const passwordstring = req.body.password.toString();
     const Companyname = req.body.Companyname;
-    const password = await bcrypt.hash(req.body.password, saltRound); //NUNCA É BOM SALVAR SENHA DE FORMA BRUTA EM UM BANCO DE DADOS!! 
+    const password = await bcrypt.hash(passwordstring, saltRound); //NUNCA É BOM SALVAR SENHA DE FORMA BRUTA EM UM BANCO DE DADOS!! 
     const email = req.body.email;
     const telefone = req.body.telefone;
     const cnpj = req.body.cnpj;

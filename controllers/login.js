@@ -20,15 +20,17 @@ router.post('/', (req,res)=>{
 
         if(result.length > 0 ){
             const Pass = result[0].password;
-            const compare = await bcrypt.compare(password, Pass); 
+           
+            const compare =  bcrypt.compare(password, Pass); 
             
             if (compare) {
               
                 req.session.isAuthenticated = true;
                 req.session.userId = result[0].id;
                 req.session.name_company = result[0].name_company; 
-                return res.redirect('/temporario');
+                return res.redirect('/dashboard');
               } else {
+              
                 res.send('Senha incorreta!');
               }
         }else{

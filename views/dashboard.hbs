@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar model</title>
+    <base href="/">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/navbar.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <title>Menu Lateral e Barra Superior com Tailwind CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="javascripts/dashboard.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.11.0/css/flag-icons.min.css" integrity="sha512-ZQKxM5Z+PmOVa/VmISvHcqlUgzPejY92+I+sur69qiB7Vd+dAaDNMwy7AnRr6HcFbYY4so1FFPBgugE5s2jm7Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/tailadmin@2.0.0/dist/tailadmin.min.css" rel="stylesheet">
+<style>
+.fixed-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Defina um valor de z-index apropriado para a sobreposição */
+    /* Outros estilos desejados, como largura, altura, cor de fundo, etc. */
+}
+</style>
+
+</head>
+<body class="bg-gray-100">
+    <!-- Menu Lateral -->
+    <aside class="fixed-menu bg-white h-screen w-64 border-r border-gray-300 float-left shadow-lg" >
+        <!-- Título da Empresa -->
+        <div class="py-6 px-4 text-center">
+            <h1 class="text-xl font-semibold text-gray-800">{{username}}</h1>
+            <hr class="shadow-lg h-2">
+        </div>
+
+        <!-- Itens do Menu -->
+        <nav>
+            <ul class="space-y-2 ">
+                <li ><a href="#" class="block p-4 text-gray-600 hover:bg-gray-200 flex items-center justify-center"><ion-icon name="home-outline" class="w-6 h-6 mr-2 flex" ></ion-icon>Dashboard</a></li>
+                <li><a href="#" class="block p-4 text-gray-600 hover:bg-gray-200 flex items-center justify-center"><ion-icon name="logo-dropbox" class="w-6 h-6 mr-2 flex"></ion-icon>Inventário</a></li>
+                <li><a href="#" class="block p-4 text-gray-600 hover:bg-gray-200 flex items-center justify-center"> <ion-icon name="business-outline" class="w-6 h-6 mr-2 flex"></ion-icon>Fornecedores</a></li>
+                <li><a href="#" class="block p-4 text-gray-600 hover:bg-gray-200 flex items-center justify-center"><ion-icon name="hammer-outline" class="w-6 h-6 mr-2 flex"></ion-icon>Ajustes</a></li>
+                <li><a href="logout" class="block p-4 text-gray-600 hover:bg-gray-200 flex items-center justify-center"><ion-icon name="log-out-outline" class="w-6 h-6 mr-2 flex"></ion-icon>Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Barra Superior -->
+    <header class=" bg-white shadow-md ">
+        <div class="container mx-auto py-2">
+            <div class="flex justify-between items-center">
+            
+                <div class="space-x-4 m-3 display flex justify-center items-center">
+                    <a><input type="search" name="pesquisa" placeholder="Pesquisa" class="pesquisa"></a>
+
+                <span class="fi fi-br" id="flag-br"></span>
+
+                  <a href="#" class="text-gray-600 hover:text-gray-800"><ion-icon name="call-outline"></ion-icon>Suporte</a>
+
+                    <a href="#" class="text-gray-600 hover:text-gray-800">{{username}}</a>
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+<main class="   mx-auto py-8">
+  <div class="flex flex-wrap justify-center">
+    <!-- Card 1 -->
+    <div class="w-70 bg-white rounded-lg shadow-lg p-6 m-2 flex justify-center items-center hover:shadow-xl transition-transform transform duration-600 hover:scale-105 cursor-pointer hover:bg-red-400 ">
+      <div class="w-20 h-20 bg-gradient-to-b from-red-500 to-blue-300 rounded-lg mr-4 ">
+        <img src="icons/grafico-preditivo.png">
+      </div>
+      <div class="flex flex-col ustify-center items-center">
+            <p class="text-gray-700 text-lg ">Total Itens</p>
+            <p class="text-gray-500 text-lg">10</p>
+            
+      </div>
+  
+    </div>
+
+    <!-- Card 2 -->
+    <!-- Card 1 -->
+    <div class="w-70 bg-white rounded-lg shadow-lg p-6 m-2 flex justify-center items-center hover:shadow-xl transition-transform transform duration-600 hover:scale-105 cursor-pointer hover:bg-blue-300 ">
+      <div class="w-20 h-20 bg-gradient-to-b from-blue-500 to-blue-300 rounded-lg mr-4 ">
+        <img src="icons/pasta (1).png">
+      </div>
+      <div class="flex flex-col ustify-center items-center">
+            <p class="text-gray-700 text-lg">Em falta</p>
+            <p class="text-gray-500 text-lg">Lampada</p>
+            
+      </div>
+  
+    </div>
+
+    <div class="w-70 bg-white rounded-lg shadow-lg p-6 m-2 flex justify-center items-center hover:shadow-xl transition-transform transform duration-600 hover:scale-105 cursor-pointer hover:bg-green-300 ">
+      <div class="w-20 h-20 bg-gradient-to-b from-green-600 to-green-300 rounded-lg mr-4 ">
+        <img src="icons/tudo.png">
+      </div>
+      <div class="flex flex-col ustify-center items-center">
+            <p class="text-gray-700 text-lg">Valor Total</p>
+            <p class="text-gray-500 text-md">R$ 460009,00</p>
+            
+      </div>
+  
+    </div>
+        <div class="w-70 bg-white rounded-lg shadow-lg p-6 m-2 flex justify-center items-center hover:shadow-xl transition-transform transform duration-600 hover:scale-105 cursor-pointer hover:bg-gray-500  ">
+           <div class="w-20 h-20 bg-gradient-to-b from-gray-500 to-blue-300 rounded-lg mr-4 ">
+        <img src="icons/conta-bancaria.png">
+      </div>
+      <div class="flex flex-col ustify-center items-center">
+            <p class="text-gray-700 text-lg">Vencido</p>
+            <p class="text-gray-500 text-lg">Lampada</p>
+            
+      </div>
+  
+    </div>
+
+
+
+  </div>
+
+</main>
+
+<div class="flex mx-auto py-8">
+  <div id="container" class="w-1/2 mx-auto h-1/2 p-4 bg-white rounded-lg shadow-lg">
+    <canvas id="meuGrafico"></canvas>
+  </div>
+  <div class="w-auto bg-white rounded-lg shadow-lg m-10 flex flex-col items-center">
+  <table class="border-collapse w-full ">
+  <thead class="bg-gray-500 ">
+    <tr >
+      <th class="border border-gray-300 px-4 py-2 text-left ">Top 4 Itens Maior Quantidade</th>
+       <th class="border border-gray-300 px-4 py-2 text-left ">Quantidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Linha 1 -->
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">Camelodas31231321321321dadsadsa</td>
+      <td class="border border-gray-300 px-4 py-2">2000</td>
+    </tr>
+    <!-- Linha 2 -->
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">Lampada</td>
+      <td class="border border-gray-300 px-4 py-2">20</td>
+    </tr>
+    <!-- Linha 3 -->
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">Pasto</td>
+       <td class="border border-gray-300 px-4 py-2">20</td>
+    </tr>
+    <!-- Linha 4 -->
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">Chocolate</td>
+       <td class="border border-gray-300 px-4 py-2">20</td>
+    </tr>
+    <!-- Linha 5 -->
+<tr>
+      <td class="border border-gray-300 px-4 py-2">Chocolate</td>
+      <td class="border border-gray-300 px-4 py-2">20</td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+  
+  </div>
+  
+</div>
+
+
+<!-- Adicione a classe "h-screen" para ocupar toda a altura da tela -->
+<!--<div class="flex justify-center items-center">
+  <table class="w-96 bg-white rounded-lg shadow-lg p-6 m-2 hover:shadow-xl transition-transform transform duration-600 cursor-pointer hover:bg-blue-500 mx-auto">
+     Cabeçalhos da tabela 
+    <thead>
+      <tr>
+        <th class="border border-gray-300 px-4 py-2 text-left">Itens Registrados</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Quantidade</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Status</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Autor</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Situação</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Tipo</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Valor un.</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Valor Total</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Setor</th>
+        <th class="border border-gray-300 px-4 py-2 text-left">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+       Linha de exemplo 
+      <tr>
+        <td class="border border-gray-300 px-4 py-2">Caderno</td>
+        <td class="border border-gray-300 px-4 py-2">20</td>
+        <td class="border border-gray-300 px-4 py-2">Em estoque</td>
+        <td class="border border-gray-300 px-4 py-2">Juscelino .M</td>
+        <td class="border border-gray-300 px-4 py-2">Em uso</td>
+        <td class="border border-gray-300 px-4 py-2">Material</td>
+        <td class="border border-gray-300 px-4 py-2">R$ 20,00</td>
+        <td class="border border-gray-300 px-4 py-2">R$ 400,00</td>
+        <td class="border border-gray-300 px-4 py-2">Padrão</td>
+        <td class="border border-gray-300 px-4 py-2">Excluir</td>
+      </tr>
+    </tbody>
+  </table>
+</div>   -->
+
+
+
+
+<script>
+ // Obtém uma referência ao elemento canvas
+ var ctx = document.getElementById('meuGrafico').getContext('2d');
+ var graficoWidth = 500; // Largura desejada
+var graficoHeight = 300; // Altura desejada
+
+// Define os dados do gráfico (por exemplo, dados de exemplo)
+var data = {
+  // ...
+};
+
+// Define o estilo do elemento canvas para a largura e altura desejadas
+document.getElementById('meuGrafico').width = graficoWidth;
+document.getElementById('meuGrafico').height = graficoHeight;
+ // Define os dados do gráfico (por exemplo, dados de exemplo)
+ var data = {
+   labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+   datasets: [{
+     label: 'Vendas',
+     data: [12, 19, 3, 5, 2, 1 ,10, 20, -1, 5, 100],
+     backgroundColor: 'rgba(75, 192, 192, 0.2)', // Cor de fundo das barras
+     borderColor: 'rgba(75, 192, 192, 1)', // Cor da borda das barras
+     borderWidth: 1 // Largura da borda das barras
+   }]
+ };
+
+ // Cria o gráfico
+ var meuGrafico = new Chart(ctx, {
+   type: 'line', // Tipo de gráfico (linha)
+   data: data, // Dados do gráfico
+   options: {
+     // Configurações adicionais (por exemplo, rótulos, escalas, etc.)
+   }
+ });
+
+
+  </script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

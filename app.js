@@ -40,17 +40,25 @@ app.set('view engine', 'hbs');
 
 //pagina principal
 
-app.get('/temporario', async(req, res)=>{
+app.get('/dashboard', async(req, res)=>{
   if(req.session.isAuthenticated){
     const username = req.session.name_company;
-   res.render('navbar.hbs', {username});
+   res.render('dashboard.hbs', {username});
    
   }else{
     res.redirect('/login');
   }
 
 })
-
+app.get('/logout', (req, res)=>{
+  req.session.destroy((err)=>{
+    if(err){
+      console.error("Erro ao fazer logout:", err)
+    }else{
+      res.redirect('/login');
+    }
+  })
+})
 app.get('/fornecedor', async(req, res)=>{
   if(req.session.isAuthenticated){
     const username = req.session.name_company;
@@ -60,6 +68,8 @@ app.get('/fornecedor', async(req, res)=>{
     res.redirect('/login');
   }
 })
+
+
 app.get('/cadastrarfornecedor', (req, res)=>{
   res.render('cadastrofornecedor.hbs');
 });

@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body{
   background-color: #f5f6fa;
@@ -24,4 +24,57 @@ body{
     height: 100%;
     padding: 20px;
     transition: all 0.5s ease;
+}
+nav ul li a {
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color:#00ccff;
+}
+.pesquisa{
+  
+  width: 100%;
+  color: rgb(36, 35, 42);
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 28px;
+  border-radius: 15px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  box-shadow: rgb(0 0 0 / 12%) 0px 3px 15px, rgb(0 0 0 / 24%) 0px 1px 2px;
+  background: rgb(251, 251, 251);
+  transition: all 0.1s ease 0s;
+
+}
+.pesquisa:focus{
+
+  outline:  2px solid rgb(124, 138, 255);
+}
+#flag-br{
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+
+}
+
+/* Estilo para o menu lateral */
+aside {
+
+  top: 0;
+  left: 0;
+  height: 100%; /* Ocupa toda a altura da tela */
+  width: 64px; /* Largura do menu lateral */
+  background-color: #fff; /* Cor de fundo do menu lateral */
+  border-right: 1px solid #ccc; /* Borda direita para separar do conteúdo principal */
+  z-index: 1000; /* Certifique-se de que o menu fique acima de outros elementos */
+}
+
+/* Ajuste o estilo do conteúdo principal para acomodar o menu fixo */
+main {
+  margin-left: 64px; /* Largura do menu lateral */
+  padding-top: 20px; /* Espaçamento superior para evitar que o conteúdo seja sobreposto pelo menu */
+  /* Outros estilos do conteúdo principal */
+}
+.w-70:hover p {
+  color: white; /* Parágrafos ficarão brancos */
 }
